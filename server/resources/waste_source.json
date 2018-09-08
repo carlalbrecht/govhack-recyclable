@@ -1,0 +1,58 @@
+{
+    "2008": {
+        "All": 1605880,
+        "Other": 41000,
+        "Kerbside services": 1160000,
+        "Public place bins": ,
+        "Self-hauled waste": 404880
+    },
+    "2009": {
+        "All": 1843236,
+        "Other": 0,
+        "Kerbside services": 1315000,
+        "Public place bins": 21236,
+        "Self-hauled waste": 507000
+    },
+    "2010": {
+        "All": 1716035,
+        "Other": 10865,
+        "Kerbside services": 1254139,
+        "Public place bins": 24031,
+        "Self-hauled waste": 427000
+    },
+    "2011": {
+        "All": 1725543,
+        "Other": 22655,
+        "Kerbside services": 1223218,
+        "Public place bins": 19224,
+        "Self-hauled waste": 460446
+    },
+    "2012": {
+        "All": 1698029,
+        "Other": 31017,
+        "Kerbside services": 1193266,
+        "Public place bins": 24170,
+        "Self-hauled waste": 449576
+    },
+    "2013": {
+        "All": 1937982,
+        "Other": 24646,
+        "Kerbside services": 1283364,
+        "Public place bins": 33000,
+        "Self-hauled waste": 596972
+    },
+    "2014": {
+        "All": 1713915,
+        "Other": 27422,
+        "Kerbside services": 1229658,
+        "Public place bins": 27372,
+        "Self-hauled waste": 429463
+    },
+    "2015": {
+        "All": 1754491,
+        "Other": 516119,
+        "Kerbside services": 1206350,
+        "Public place bins": 32022,
+        "Self-hauled waste":
+    }
+}
