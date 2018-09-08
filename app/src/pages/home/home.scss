@@ -1,3 +1,41 @@
 page-home {
+  ion-content {
+    background-color: #EAEAEA !important;
+  }
 
+  ion-card {
+    // Allow absolute positioning inside cards
+    position: relative
+  }
+
+  ion-card-content.pre-ion-row {
+    padding-bottom: 0;
+  }
+
+  .button-right {
+    float: right;
+  }
+
+  #scan-object-card {
+    background-color: #388E3C;
+
+    * {
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  ion-card button.invert {
+    .button-effect {
+      background-color: #FFF !important;
+    }
+  }
+
+  .card-subject-icon {
+    font-size: 128px;
+    position: absolute;
+    bottom: -48px;
+    left: 0;
+    opacity: 0.2;
+    transform: rotate(-33deg);
+  }
 }
