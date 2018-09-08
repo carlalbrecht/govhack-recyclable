@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,12 +7,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+  <ion-card id="scan-object-card">
+    <ion-card-content class="pre-ion-row">
+      <ion-card-title>Is it Recyclable?</ion-card-title>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+      Scan an object to find out whether or not the item can be recycled, whilst
+      learning some facts about the scanned item.
+    </ion-card-content>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-row>
+      <ion-col>
+        <button class="button-right invert" ion-button clear (click)="captureFrame()">
+          Scan Object
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-icon name="camera" class="card-subject-icon"></ion-icon>
+  </ion-card>
+
+  <img *ngIf="image" [src]="image">
 </ion-content>
