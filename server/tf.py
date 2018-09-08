@@ -1,8 +1,8 @@
-# *SOME* code may be borrowed from somewhere, just sayin
-
 import tensorflow as tf
 import numpy as np
 import re
+import os
+import json
 
 
 class NodeLookup(object):
@@ -118,3 +118,32 @@ def run_inference_on_image(image_data, preds=5):
             #print('%s (score = %.5f)' % (human_string, score))
             retval.append((human_string, float(score)))
         return retval
+
+
+def run_test_images():
+    # Run all images in the "recyclable" folder through tf
+    recyclable = {}
+    for _, _, files in os.walk("test_images/recyclable"):
+        for file in files:
+            print("[Recyclable] Testing " + file)
+            image_data = tf.gfile.FastGFile(os.path.join(
+                "test_images/recyclable/", file), "rb").read()
+            tf_data = run_inference_on_image(image_data)
+            recyclable[file] = tf_data
+    # Run all the images in the "garbage" folder through tf
+    garbage = {}
+    for _, _, files in os.walk("test_images/garbage"):
+        for file in files:
+            print("[Garbage] Testing" + file)
+            image_data = tf.gfile.FastGFile(os.path.join(
+                "test_images/garbage/", file), "rb").read()
+            tf_data = run_inference_on_image(image_data)
+            garbage[file] = tf_data
+    # Dump recyclable data to "recyclable.json"
+    file = open("recyclable.json", "w")
+    file.write(json.dumps(recyclable))
+    file.close()
+    # Dump garbage data to "garbage.json"
+    file = open("garbage.json", "w")
+    file.write(json.dumps(garbage))
+    file.close()
