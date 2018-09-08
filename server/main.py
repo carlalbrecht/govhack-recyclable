@@ -49,6 +49,4 @@ def api_test():
     if file.filename == "":
         return "you have to upload a file, bro"
     filedata = file.read()
-    data = tf.run_inference_on_image(filedata)
-    print(data)
     return jsonify(tf.run_inference_on_image(filedata))
