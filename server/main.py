@@ -36,19 +36,38 @@ def db_connection(path):
     return db_connection_decorator
 
 
+@db_connection("db.db")
+def get_rval_gval(tfdata, c):
+    rval, gval = 0, 0
+    for classification in tfdata:
+        print(classification)
+        c.execute("SELECT * FROM averages WHERE classification=?",
+                  (classification[0],))
+        results = c.fetchall()
+        for item in results:
+            if item["type"] == "r":
+                rval += item["value"]
+            elif item["type"] == "g":
+                gval += item["value"]
+    return (rval, gval)
+
+
 @app.route("/")
 def index():
     return "Hello World"
 
 
-@app.route("/api/test", methods=["POST"])
-def api_test():
-    if "file" not in request.files:
-        return "you have to upload a file, man"
+@app.route("/api/upload", methods=["POST"])
+def api_upload():
+    # We just assume that a file is uploaded
     file = request.files["file"]
-    # Sometimes if the user doesn't send a file, the browser will send a file
-    # with an empty filename
-    if file.filename == "":
-        return "you have to upload a file, bro"
     filedata = file.read()
-    return jsonify(tf.run_inference_on_image(filedata))
+    tfdata = tf.run_inference_on_image(filedata)
+    rval, gval = get_rval_gval(tfdata)
+    # This just ensures that if the rval and gval are the same, we return None
+    # (null) telling the client that we are unsure of whether or not it is
+    # recyclable
+    recyclable = None
+    if rval != gval:
+        recyclable = rval > gval
+    return jsonify({"weights": dict(tfdata), "recyclable": recyclable})

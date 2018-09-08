@@ -30,13 +30,6 @@ def gen_graphs(data, name):
             else:
                 data_keys[thing1[0]] += thing1[1]
                 data_key_occurrences[thing1[0]] += 1
-    # sorted_data = sorted(
-    #     data_keys.items(), key=lambda kv: kv[1], reverse=True)
-    # sorted_data_keys = []
-    # sorted_data_values = []
-    # for thing in sorted_data:
-    #     sorted_data_keys.append(thing[0])
-    #     sorted_data_values.append(thing[1])
     _, sorted_data_keys, sorted_data_values = sort_dict(
         data_keys)
     final_data = [go.Bar(x=sorted_data_keys, y=sorted_data_values)]
@@ -57,9 +50,9 @@ def gen_graphs(data, name):
     py.offline.plot(final_data, filename=name +
                     "-graph-averages.html", auto_open=False)
 
-    averages[name] = {}
+    averages[name] = []
     for k, v in zip(list(range(len(sorted_data_keys))), sorted_data_keys):
-        averages[name][v] = sorted_data_values[k]
+        averages[name].append((name[0], v, sorted_data_values[k]))
 
 
 gen_graphs(recy, "recy")
@@ -75,3 +68,8 @@ curs.execute("""
         value INTEGER
     )
 """)
+
+for thing in averages:
+    curs.executemany("INSERT INTO averages VALUES (?,?,?)", averages[thing])
+
+conn.commit()
