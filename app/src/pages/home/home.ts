@@ -22,19 +22,25 @@ export class HomePage {
   };
 
   constructor(public navCtrl: NavController, public statusbar: StatusBar,
-              public camera: Camera) {
-    statusbar.overlaysWebView(false);
-    statusbar.backgroundColorByHexString("#2E7D32");
+              public camera: Camera) { }
+
+  ionViewDidEnter() {
+    this.setStatusBar();
+  }
+
+  setStatusBar() {
+    this.statusbar.overlaysWebView(false);
+    this.statusbar.backgroundColorByHexString("#2E7D32");
     // wtf, this is the only way to make the statusbar text actually stay white
-    setTimeout(() => statusbar.styleLightContent(), 200);
+    setTimeout(() => this.statusbar.styleLightContent(), 200);
   }
 
   captureFrame() {
     this.camera.getPicture(this.camOptions).then((imageData) => {
-      this.navCtrl.setRoot(ProcessingPage, {image: imageData},
-                           { animate: true,
-                             animation: 'md-transition',
-                             direction: 'forward' });
+      this.navCtrl.push(ProcessingPage, {image: imageData},
+                        { animate: true,
+                          animation: 'md-transition',
+                          direction: 'forward' });
     });
   }
 }

@@ -5,20 +5,25 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { FileTransfer, FileTransferObject, FileUploadOptions }
        from '@ionic-native/file-transfer';
 
+import { HomePage } from '../home/home';
+import { ResultsPage } from '../results/results';
+
+import { INetPaths } from '../../app/config';
+
 @Component({
   selector: 'page-processing',
   templateUrl: 'processing.html'
 })
 export class ProcessingPage implements OnInit {
-  // Change this for production use
-  readonly uploadURL: string = 'http://192.168.43.133/api/test';
+  // Path to send the image for processing
+  readonly uploadURL: string = INetPaths.HOST + INetPaths.ENDPOINT_IMG_UPLOAD;
 
   image: string;
   loadingStatus: string = 'Getting ready...';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public statusbar: StatusBar, public transfer: FileTransfer) {
-    this.image = this.navParams.get("image");
+    this.image = navParams.get("image");
 
     // Make status bar transparent and overlaid over content
     statusbar.overlaysWebView(true);
@@ -60,9 +65,20 @@ export class ProcessingPage implements OnInit {
     // IMPORTANT: change 4th param to false for production use
     fileTransfer.upload(this.image, this.uploadURL, uploadOptions, true)
       .then((data) => {
-
+        // Navigate to results page
+        this.navCtrl.pop({ animate: false });
+        this.navCtrl.push(ResultsPage,
+                          { image: this.image, results: data.response},
+                          { animate: true,
+                            animation: 'md-transition',
+                            direction: 'forward' });
       }, (err) => {
-
+        // Navigate back to home page and show error dialog (TODO: actually
+        // implement the error dialog on `HomePage`)
+        this.navCtrl.setRoot(HomePage, {reason: "FailedUpload"},
+                             { animate: true,
+                               animation: 'md-transition',
+                               direction: 'back' });
       });
   }
 }

@@ -14,6 +14,10 @@ page-processing {
 
     color: #FFF;
     font-size: 28px;
+
+    span {
+      text-align: center;
+    }
   }
 
   #fullscreen-progress {
@@ -35,7 +39,7 @@ page-processing {
   }
 
   #fullscreen-progress.indeterminate {
-    width: 100%;
+    width: 100% !important;
 
     animation-name: breathing;
     animation-duration: 2s;
