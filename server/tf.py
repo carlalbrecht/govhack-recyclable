@@ -134,7 +134,7 @@ def run_test_images():
     garbage = {}
     for _, _, files in os.walk("test_images/garbage"):
         for file in files:
-            print("[Garbage] Testing" + file)
+            print("[Garbage] Testing " + file)
             image_data = tf.gfile.FastGFile(os.path.join(
                 "test_images/garbage/", file), "rb").read()
             tf_data = run_inference_on_image(image_data)

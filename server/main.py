@@ -46,6 +46,8 @@ def api_test():
     if "file" not in request.files:
         return "you have to upload a file, man"
     file = request.files["file"]
+    # Sometimes if the user doesn't send a file, the browser will send a file
+    # with an empty filename
     if file.filename == "":
         return "you have to upload a file, bro"
     filedata = file.read()
