@@ -13,7 +13,7 @@ import { ProcessingPage } from '../processing/processing';
 export class HomePage {
   readonly camOptions: CameraOptions = {
     quality: 100,
-    destinationType: this.camera.DestinationType.FILE_URI,
+    destinationType: this.camera.DestinationType.NATIVE_URI,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE,
     correctOrientation: true,
@@ -22,7 +22,9 @@ export class HomePage {
   };
 
   constructor(public navCtrl: NavController, public statusbar: StatusBar,
-              public camera: Camera) { }
+              public camera: Camera) {
+    this.setStatusBar();
+  }
 
   ionViewDidEnter() {
     this.setStatusBar();

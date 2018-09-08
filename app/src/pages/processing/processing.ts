@@ -68,7 +68,7 @@ export class ProcessingPage implements OnInit {
         // Navigate to results page
         this.navCtrl.pop({ animate: false });
         this.navCtrl.push(ResultsPage,
-                          { image: this.image, results: data.response},
+                          { image: this.image, results: data.response },
                           { animate: true,
                             animation: 'md-transition',
                             direction: 'forward' });

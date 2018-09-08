@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ProcessingPage } from '../pages/processing/processing';
 import { ResultsPage } from '../pages/results/results';
+import { ImprovePage } from '../pages/improve/improve';
 
 import { Camera } from '@ionic-native/camera';
 import { FileTransfer } from '@ionic-native/file-transfer';
@@ -20,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     ProcessingPage,
-    ResultsPage
+    ResultsPage,
+    ImprovePage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     ProcessingPage,
-    ResultsPage
+    ResultsPage,
+    ImprovePage
   ],
   providers: [
     Camera,
