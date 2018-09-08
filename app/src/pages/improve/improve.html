@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle icon-only (click)="navCtrl.pop()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Report Incorrect Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    Help us improve our AI! Please let us know below what the item is that you
+    scanned.
+  </div>
+
+  <div>
+    <ion-item no-padding>
+      <ion-input type="text" [(value)]="objectType" placeholder="What was it?"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <button ion-button full color="primary">Submit Report</button>
+  </div>
+</ion-content>

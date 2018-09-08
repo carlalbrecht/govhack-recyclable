@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle icon-only (click)="navCtrl.pop()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="captured-image">
+    <img [src]="image">
+  </div>
+
+  <div id="data-section">
+    <div id="data-header">
+      <button ion-button round icon-only id="mark-inaccurate" (click)="gotoImprove()">
+        <ion-icon name="thumbs-down"></ion-icon>
+      </button>
+
+      <span id="garbage-type">{{ garbageType }}</span>
+      <span id="object-type">
+        We are {{ confidence }} sure that that's a {{ objectType }}
+      </span>
+    </div>
+
+    <div id="more-separator">
+      <ion-icon name="arrow-down"></ion-icon>
+      <span>More Information</span>
+    </div>
+
+    <div id="remaining-content">
+
+    </div>
+  </div>
+</ion-content>

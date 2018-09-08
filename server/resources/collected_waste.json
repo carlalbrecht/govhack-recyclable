@@ -1,0 +1,74 @@
+{	
+	"2008":{
+        "All": 848120,
+        "Other": 579431,
+        "Glass ": 84137,
+        "Paper and cardboard": 165696,
+        "Plastic": 11383,
+        "Steel cans": 5119,
+        "Aluminium cans": 2354
+    },
+    "2009":{
+        "All": 1238000,
+        "Other": 961854,
+        "Glass ": 84342,
+        "Paper and cardboard": 169851,
+        "Plastic": 13631,
+        "Steel cans": 5447,
+        "Aluminium cans": 2875
+    },
+    "2010":{
+        "All": 1216168,
+        "Other": 919029,
+        "Glass ": 98532,
+        "Paper and cardboard": 175211,
+        "Plastic": 14986,
+        "Steel cans": 5477,
+        "Aluminium cans": 2933
+    },
+    "2011":{
+        "All": 1256435,
+        "Other": 935717,
+        "Glass ": 102228,
+        "Paper and cardboard": 194450,
+        "Plastic": 15865,
+        "Steel cans": 5450,
+        "Aluminium cans": 2725
+    },
+    "2012":{
+        "All": 1067054,
+        "Other": 755966,
+        "Glass ": 98846,
+        "Paper and cardboard": 182949,
+        "Plastic": 20101,
+        "Steel cans": 6112,
+        "Aluminium cans": 3080
+    },
+    "2013":{
+        "All": 961152,
+        "Other": 656906,
+        "Glass ": 91441,
+        "Paper and cardboard": 180121,
+        "Plastic": 22899,
+        "Steel cans": 6594,
+        "Aluminium cans": 3191
+    },
+    "2014":{
+        "All": 922725,
+        "Other": 628301,
+        "Glass ": 101614,
+        "Paper and cardboard": 161035,
+        "Plastic": 22439,
+        "Steel cans": 6060,
+        "Aluminium cans": 3276
+    },
+    "2015":{
+        "All": 796830,
+        "Other": 485577,
+        "Glass ": 108741,
+        "Paper and cardboard": 170432,
+        "Plastic": 22802,
+        "Steel cans": 5917,
+        "Aluminium cans": 3361
+    }   
+}
