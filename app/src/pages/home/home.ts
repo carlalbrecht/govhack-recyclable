@@ -11,15 +11,13 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 export class HomePage {
   readonly camOptions: CameraOptions = {
     quality: 100,
-    destinationType: this.camera.DestinationType.FILE_URI,
+    destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE,
     correctOrientation: true,
     saveToPhotoAlbum: false,
     cameraDirection: this.camera.Direction.BACK
   };
-
-  image: string | null = null;
 
   constructor(public navCtrl: NavController, public statusbar: StatusBar,
               public camera: Camera) {
@@ -31,7 +29,10 @@ export class HomePage {
 
   captureFrame() {
     this.camera.getPicture(this.camOptions).then((imageData) => {
-      this.image = "data:image/jpeg;base64," + imageData;
+      this.navCtrl.setRoot('page-processing', {image: imageData},
+                           { animate: true,
+                             animation: 'md-transition',
+                             direction: 'forward' });
     });
   }
 }
