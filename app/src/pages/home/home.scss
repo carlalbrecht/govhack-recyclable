@@ -1,4 +1,8 @@
 page-home {
+  ion-content {
+    background-color: #EAEAEA !important;
+  }
+
   ion-card {
     // Allow absolute positioning inside cards
     position: relative
@@ -31,7 +35,7 @@ page-home {
     position: absolute;
     bottom: -48px;
     left: 0;
-    opacity: 0.25;
+    opacity: 0.2;
     transform: rotate(-33deg);
   }
 }

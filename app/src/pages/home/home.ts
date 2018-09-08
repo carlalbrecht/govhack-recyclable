@@ -31,7 +31,7 @@ export class HomePage {
 
   captureFrame() {
     this.camera.getPicture(this.camOptions).then((imageData) => {
-      this.image = imageData;
+      this.image = "data:image/jpeg;base64," + imageData;
     });
   }
 }
