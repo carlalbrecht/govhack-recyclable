@@ -1,0 +1,7 @@
+{
+  "name": "recyclable-frontend",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
