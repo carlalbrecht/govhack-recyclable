@@ -3,7 +3,7 @@
         "All": 1605880,
         "Other": 41000,
         "Kerbside services": 1160000,
-        "Public place bins": ,
+        "Public place bins": 0,
         "Self-hauled waste": 404880
     },
     "2009": {
@@ -53,6 +53,6 @@
         "Other": 516119,
         "Kerbside services": 1206350,
         "Public place bins": 32022,
-        "Self-hauled waste":
+        "Self-hauled waste": null
     }
 }
