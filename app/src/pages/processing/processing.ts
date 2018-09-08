@@ -11,7 +11,7 @@ import { FileTransfer, FileTransferObject, FileUploadOptions }
 })
 export class ProcessingPage implements OnInit {
   // Change this for production use
-  readonly uploadURL: string = 'http://localhost/api/[replaceme]';
+  readonly uploadURL: string = 'http://192.168.43.133/api/test';
 
   image: string;
   loadingStatus: string = 'Getting ready...';

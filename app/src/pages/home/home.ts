@@ -30,11 +30,11 @@ export class HomePage {
   }
 
   captureFrame() {
-    //this.camera.getPicture(this.camOptions).then((imageData) => {
-      this.navCtrl.setRoot(ProcessingPage, {image: null},
+    this.camera.getPicture(this.camOptions).then((imageData) => {
+      this.navCtrl.setRoot(ProcessingPage, {image: imageData},
                            { animate: true,
                              animation: 'md-transition',
                              direction: 'forward' });
-    //});
+    });
   }
 }
