@@ -1,0 +1,128 @@
+{
+    "Australia":{
+        "Cigarettes": {	
+            "Beaches": 20,
+            "Car parks": 31,
+            "Highways": 13,
+            "Industrial sites": 31,
+            "Recreational parks": 9,
+            "Residential sites": 13,
+            "Retail strips": 72,
+            "Shopping centres": 50
+        },	
+        "Glass": {	
+            "Beaches": 1,
+            "Car parks": 1,
+            "Highways": 1,
+            "Industrial sites": 2,
+            "Recreational parks": 0.4,
+            "Residential sites": 1,
+            "Retail strips": 1,
+            "Shopping centres": 1
+        },	
+        "Metal": {	
+            "Beaches": 4,
+            "Car parks": 4,
+            "Highways": 5,
+            "Industrial sites": 7,
+            "Recreational parks": 2,
+            "Residential sites": 4,
+            "Retail strips": 6,
+            "Shopping centres": 4
+        },	
+        "Paper": {	
+            "Beaches": 8,
+            "Car parks": 9,
+            "Highways": 10,
+            "Industrial sites": 19,
+            "Recreational parks": 4,
+            "Residential sites": 9,
+            "Retail strips": 14,
+            "Shopping centres": 11
+        },	
+        "Plastic": {	
+            "Beaches": 14,
+            "Car parks": 9,
+            "Highways": 11,
+            "Industrial sites": 20,
+            "Recreational parks": 7,
+            "Residential sites": 10,
+            "Retail strips": 14,
+            "Shopping centres": 10
+        },	
+        "Other": {	
+            "Beaches": 3,
+            "Car parks": 1,
+            "Highways": 3,
+            "Industrial sites": 3,
+            "Recreational parks": 2,
+            "Residential sites": 0,
+            "Retail strips": 1,
+            "Shopping centres": 0
+        }
+        
+        
+    },
+    "Queensland":{
+        "Cigarettes": {	
+            "Beaches": 29,
+            "Car parks": 41,
+            "Highways": 26,
+            "Industrial sites": 38,
+            "Recreational parks": 14,
+            "Residential sites": 15,
+            "Retail strips": 93,
+            "Shopping centres": 105
+        },        
+        "Glass": {	
+            "Beaches": 1,
+            "Car parks": 0.5,
+            "Highways": 2,
+            "Industrial sites": 0.5,
+            "Recreational parks": 0.4,
+            "Residential sites": 0.3,
+            "Retail strips": 1,
+            "Shopping centres": 0.1
+        },	
+        "Metal": {	
+            "Beaches": 7,
+            "Car parks": 5,
+            "Highways": 8,
+            "Industrial sites": 5,
+            "Recreational parks": 4,
+            "Residential sites": 3,
+            "Retail strips": 7,
+            "Shopping centres": 7
+        },	
+        "Paper": {	
+            "Beaches": 12,
+            "Car parks": 6,
+            "Highways": 16,
+            "Industrial sites": 19,
+            "Recreational parks": 5,
+            "Residential sites": 11,
+            "Retail strips": 26,
+            "Shopping centres": 21
+        },	
+        "Plastic": {	
+            "Beaches": 20,
+            "Car parks": 10,
+            "Highways": 21,
+            "Industrial sites": 21,
+            "Recreational parks": 13,
+            "Residential sites": 11,
+            "Retail strips": 17,
+            "Shopping centres": 19
+        },
+        "Other": {	
+            "Beaches": 3,
+            "Car parks": 0,
+            "Highways": 2,
+            "Industrial sites": 1,
+            "Recreational parks": 2,
+            "Residential sites": 1,
+            "Retail strips": 1,
+            "Shopping centres": 1
+        }
+    }
+}
