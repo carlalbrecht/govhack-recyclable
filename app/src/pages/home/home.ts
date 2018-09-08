@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
+import { ProcessingPage } from '../processing/processing';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -11,7 +13,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 export class HomePage {
   readonly camOptions: CameraOptions = {
     quality: 100,
-    destinationType: this.camera.DestinationType.DATA_URL,
+    destinationType: this.camera.DestinationType.FILE_URI,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE,
     correctOrientation: true,
@@ -28,11 +30,11 @@ export class HomePage {
   }
 
   captureFrame() {
-    this.camera.getPicture(this.camOptions).then((imageData) => {
-      this.navCtrl.setRoot('page-processing', {image: imageData},
+    //this.camera.getPicture(this.camOptions).then((imageData) => {
+      this.navCtrl.setRoot(ProcessingPage, {image: null},
                            { animate: true,
                              animation: 'md-transition',
                              direction: 'forward' });
-    });
+    //});
   }
 }
