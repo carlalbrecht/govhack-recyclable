@@ -1,3 +1,4 @@
 # Server Documentation
 ## Database
-![alt text](../documentation/ERD_recyclable.PNG)
+The database schema is outlined as below. Currently using SQLite.
+![Database Schema](../documentation/ERD_recyclable.PNG)
