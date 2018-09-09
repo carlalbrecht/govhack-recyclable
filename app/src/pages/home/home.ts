@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { ProcessingPage } from '../processing/processing';
+import { StatsPage } from '../stats/stats';
 import { HelpPage } from '../help/help';
 
 @Component({
@@ -23,12 +24,15 @@ export class HomePage {
   };
 
   constructor(public navCtrl: NavController, public statusbar: StatusBar,
-              public camera: Camera) {
+              public camera: Camera, public menuCtrl: MenuController) {
     this.setStatusBar();
   }
 
   ionViewDidEnter() {
     this.setStatusBar();
+
+    // Prevent menu opening if user taps header back arrow on child page
+    setTimeout(() => this.menuCtrl.close(), 200);
   }
 
   setStatusBar() {
@@ -45,6 +49,13 @@ export class HomePage {
                           animation: 'md-transition',
                           direction: 'forward' });
     });
+  }
+
+  viewStats() {
+    this.navCtrl.push(StatsPage, undefined,
+                      { animate: true,
+                        animation: 'md-transition',
+                        direction: 'forward' });
   }
 
   getHelp() {
