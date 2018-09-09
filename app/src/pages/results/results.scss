@@ -27,9 +27,8 @@ page-results {
   #data-section {
     position: absolute;
     top: 80%;
-
-    width: 100%;
     height: 100%;
+    width: 100%;
     background-color: #FFF;
     color: #FFF;
 
@@ -73,7 +72,15 @@ page-results {
       position: absolute;
       top: 20%;
       width: 100%;
+      height: 100%;
       background-color: #EAEAEA;
+
+      ion-card {
+        ion-card-title {
+          position: relative;
+          left: 10px;
+        }
+      }
     }
   }
 }

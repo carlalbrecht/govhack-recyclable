@@ -32,7 +32,11 @@ export class HomePage {
     this.setStatusBar();
 
     // Prevent menu opening if user taps header back arrow on child page
-    setTimeout(() => this.menuCtrl.close(), 200);
+    this.menuCtrl.enable(true);
+  }
+
+  ionViewDidLeave() {
+    this.menuCtrl.enable(false);
   }
 
   setStatusBar() {

@@ -29,7 +29,7 @@ export class ResultsPage {
   // How confident overall the NN is of its classification
   confidence: string = "83%";
   // The classification produced by the NN
-  objectType: string = "picture of something";
+  objectType: string = "beer bottle";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public statusbar: StatusBar, public platform: Platform) {

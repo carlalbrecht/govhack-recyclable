@@ -9,7 +9,8 @@
 
 <ion-content>
   <div id="captured-image">
-    <img [src]="image">
+    <!-- CORS stops this from working -->
+    <!-- <img [src]="image"> -->
   </div>
 
   <div id="data-section">
@@ -32,6 +33,9 @@
     <div id="remaining-content">
       <ion-card>
         <ion-card-title>Bins Near You</ion-card-title>
+
+        <!-- This could've been so much more :( -->
+        <img src="assets/imgs/bin_map.png">
       </ion-card>
     </div>
   </div>
