@@ -1,4 +1,6 @@
 # Description
+This project was an app idea for GovHack 2018 on the Gold Coast, Queensland. You can support this project by voting for it at [Hacker Space](https://2018.hackerspace.govhack.org/projects/recyclable_121). 
+
 ## The Problem
 Waste disposal is a difficult problem in our cities and towns that have to balance a delicate relationship between necessity, environmental impacts, and costs. One of the major costs in the recycling programs provided by state and local governments is the cost of sorting non-recyclable waste from the recyclable rubbish. Current solutions include better automation techniques and strategies for educating the public on what is recyclable and what isn't. The final problem is the cost of illegally disposed waste, or litter, that cost local governments over $18 million in 2017. We need a way of helping people make correct decisions for recycling, more effective education strategies and a way to incentivize and encourage more responsible disposal of rubbish. 
 
