@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { ProcessingPage } from '../pages/processing/processing';
 import { ResultsPage } from '../pages/results/results';
 import { ImprovePage } from '../pages/improve/improve';
+import { HelpPage } from '../pages/help/help';
 
 import { Camera } from '@ionic-native/camera';
 import { FileTransfer } from '@ionic-native/file-transfer';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     ProcessingPage,
     ResultsPage,
-    ImprovePage
+    ImprovePage,
+    HelpPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     ProcessingPage,
     ResultsPage,
-    ImprovePage
+    ImprovePage,
+    HelpPage
   ],
   providers: [
     Camera,

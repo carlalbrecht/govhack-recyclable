@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { ProcessingPage } from '../processing/processing';
+import { HelpPage } from '../help/help';
 
 @Component({
   selector: 'page-home',
@@ -44,5 +45,12 @@ export class HomePage {
                           animation: 'md-transition',
                           direction: 'forward' });
     });
+  }
+
+  getHelp() {
+    this.navCtrl.push(HelpPage, undefined,
+                      { animate: true,
+                        animation: 'md-transition',
+                        direction: 'forward' });
   }
 }

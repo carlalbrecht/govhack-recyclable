@@ -24,6 +24,20 @@ page-home {
     }
   }
 
+  #stats-card {
+    background-color: #1976D2;
+
+    * {
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  #help-card {
+    .card-subject-icon {
+      font-size: 160px !important;
+    }
+  }
+
   ion-card button.invert {
     .button-effect {
       background-color: #FFF !important;

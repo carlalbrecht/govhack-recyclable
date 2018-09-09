@@ -65,6 +65,7 @@ export class ProcessingPage implements OnInit {
     // IMPORTANT: change 4th param to false for production use
     fileTransfer.upload(this.image, this.uploadURL, uploadOptions, true)
       .then((data) => {
+        console.log(JSON.stringify(data));
         // Navigate to results page
         this.navCtrl.pop({ animate: false });
         this.navCtrl.push(ResultsPage,

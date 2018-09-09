@@ -29,15 +29,40 @@
 
 
   <ion-card id="stats-card">
-    <ion-card-content>
+    <ion-card-content class="pre-ion-row">
       <ion-card-title>Gold Coast Statistics</ion-card-title>
 
-      Put some Gold Coast area recycling statistics here, perhaps.
+      See how the Gold Coast region's recycling performance stacks up against
+      the rest of Australia.
     </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button class="button-right invert" ion-button clear (click)="viewStats()">
+          View Stats
+        </button>
+      </ion-col>
+    </ion-row>
 
     <ion-icon name="analytics" class="card-subject-icon"></ion-icon>
   </ion-card>
 
 
-  <img *ngIf="image" [src]="image">
+  <ion-card id="help-card">
+    <ion-card-content>
+      <ion-card-title>Get Help</ion-card-title>
+
+      Learn about how the app works and find solutions to common problems.
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button class="button-right" ion-button clear (click)="getHelp()">
+          View Topics
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-icon name="help-circle" class="card-subject-icon"></ion-icon>
+  </ion-card>
 </ion-content>

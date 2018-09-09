@@ -10,7 +10,8 @@ import { ImprovePage } from '../improve/improve';
  * uploaded image.
  */
 interface TFResults {
-
+  weights: { [objectType: string]: number },
+  recyclable: boolean | null;
 }
 
 @Component({
@@ -23,6 +24,7 @@ export class ResultsPage {
   results: TFResults;
 
   // Can be "Recyclable", "Garbage", (potentially in the future) "Green Waste"
+  // or "Unsure" if the NN can't determine the object's recyclability
   garbageType: string = "Recyclable";
   // How confident overall the NN is of its classification
   confidence: string = "83%";
